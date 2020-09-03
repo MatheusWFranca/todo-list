@@ -14,10 +14,16 @@ export default class Main extends Component {
     tarefas: [],
   };
 
+  componentDidMount() {}
+
+  componentDidUpdate() {
+
+  }
+
   // adicionar tarefas
   handleSubmit = (event) => {
     event.preventDefault();
-    const { tarefas } = this.state;
+    const { tarefas, index } = this.state;
     let { novaTarefa } = this.state;
     novaTarefa = novaTarefa.trim();
 
@@ -25,9 +31,20 @@ export default class Main extends Component {
 
     const novaTarefas = [...tarefas];
 
-    this.setState({
-      tarefas: [...novaTarefas, novaTarefa],
-    });
+    if (index === -1) {
+      this.setState({
+        tarefas: [...novaTarefas, novaTarefa],
+        novaTarefa: '',
+        index: -1,
+      });
+    } else {
+      novaTarefas[index] = novaTarefa;
+
+      this.setState({
+        tarefas: [...novaTarefas],
+        index: -1,
+      });
+    }
   }
 
   handleChange = (event) => {
@@ -37,7 +54,12 @@ export default class Main extends Component {
   }
 
   handleEdit = (event, index) => {
+    const { tarefas } = this.state;
 
+    this.setState({
+      index,
+      novaTarefa: tarefas[index],
+    });
   }
 
   handleDelete = (event, index) => {
@@ -55,7 +77,7 @@ export default class Main extends Component {
 
     return (
       <div className="main">
-        <h1>Lista de Tarefas</h1>
+        <h1>Reminders</h1>
 
         <form onSubmit={this.handleSubmit} action="#" className="form">
           <input
