@@ -9,9 +9,13 @@
   height: 40px;
   padding: 0 20px;
   font-size: 20px;
-  border: 1px solid #ccc;
-  border-radius: 2px;
+  border: 1px solid #fff;
+  border-radius: 10px 0px 0px 10px;
   min-width: 80%;
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, 1),
+              inset 4px 4px 10px rgba(0, 0, 0, 0.05),
+              inset -4px -4px 10px rgba(255, 255, 255, 1),
+              4px 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .form button[type="submit"] {
@@ -23,10 +27,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 0px 10px 10px 0px;
 }
 
 .form button[type="submit"]:hover {
   background: #d13d53;
   transition-duration: 0.6s;
 }
+
 

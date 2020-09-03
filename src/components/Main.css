@@ -2,13 +2,16 @@
   background: #fff;
   padding: 30px;
   margin: 50px auto;
-  max-width: 500px;
-  border-radius: 4px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  position: relative;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 
 .main h1 {
-  font-size: 20px;
+  font-family: Poppins, sans-serif;
+  color: #C08497;
+  font-size: 25px;
   text-align: center;
+  text-transform: uppercase;
 }
-

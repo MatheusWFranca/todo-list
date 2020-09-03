@@ -3,6 +3,7 @@
 }
 
 .tarefas li {
+  color: #C08497;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,7 +11,7 @@
 }
 
 .tarefas li:hover {
-  background: #51c5de;
+  background: #D8DCFF;
   transition-duration: 0.4s;
   border-radius: 5px;
 }

@@ -7,7 +7,7 @@
 
 body {
   font-family: sans-serif;
-  background: #0a4f70;
+  background-image: linear-gradient(to right, #a18cd1 0%, #fbc2eb 100%);
 }
 
 button {
