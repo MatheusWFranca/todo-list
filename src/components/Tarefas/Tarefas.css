@@ -28,6 +28,10 @@
   cursor: pointer;
 }
 
+.tarefas li .check {
+  cursor: pointer;
+}
+
 .tarefas li:hover .edit,
 .tarefas li:hover .delete {
   color: #fff;

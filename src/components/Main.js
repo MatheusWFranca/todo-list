@@ -90,6 +90,7 @@ export default class Main extends Component {
         <Form
           handleSubmit={this.handleSubmit}
           handleChange={this.handleChange}
+          handleCheck={this.handleCheck}
           novaTarefa={novaTarefa}
         />
 
@@ -97,6 +98,7 @@ export default class Main extends Component {
           tarefas={tarefas}
           handleEdit={this.handleEdit}
           handleDelete={this.handleDelete}
+          handleCheck={this.handleCheck}
         />
 
       </div>
