@@ -79,3 +79,7 @@
   transition-duration: 0.6s;
 }
 
+.tarefas li span {
+  display: flex;
+  align-items: center;
+}
