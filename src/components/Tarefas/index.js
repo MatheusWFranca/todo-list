@@ -2,7 +2,7 @@ import React from "react";
 
 import PropTypes from "prop-types";
 
-import { FaEdit, FaRegTrashAlt, FaCheck } from "react-icons/fa";
+import { FaEdit, FaRegTrashAlt } from "react-icons/fa";
 
 import "./Tarefas.css";
 
