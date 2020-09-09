@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import Form from './Form';
+import Form from "./Form";
 
-import './Main.css';
+import "./Main.css";
 
-import Tarefas from './Tarefas';
+import Tarefas from "./Tarefas";
 
 export default class Main extends Component {
   state = {
-    novaTarefa: '',
+    novaTarefa: "",
     tarefas: [],
   };
 
   componentDidMount() {
-    const tarefas = JSON.parse(localStorage.getItem('tarefas'));
+    const tarefas = JSON.parse(localStorage.getItem("tarefas"));
 
     if (!tarefas) return;
 
@@ -25,7 +25,7 @@ export default class Main extends Component {
 
     if (tarefas === prevState.tarefas) return;
 
-    localStorage.setItem('tarefas', JSON.stringify(tarefas));
+    localStorage.setItem("tarefas", JSON.stringify(tarefas));
   }
 
   // adicionar tarefas
@@ -42,7 +42,7 @@ export default class Main extends Component {
     if (index === -1) {
       this.setState({
         tarefas: [...novaTarefas, novaTarefa],
-        novaTarefa: '',
+        novaTarefa: "",
         index: -1,
       });
     } else {
@@ -53,13 +53,13 @@ export default class Main extends Component {
         index: -1,
       });
     }
-  }
+  };
 
   handleChange = (event) => {
     this.setState({
       novaTarefa: event.target.value,
     });
-  }
+  };
 
   handleEdit = (event, index) => {
     const { tarefas } = this.state;
@@ -68,7 +68,7 @@ export default class Main extends Component {
       index,
       novaTarefa: tarefas[index],
     });
-  }
+  };
 
   handleDelete = (event, index) => {
     const { tarefas } = this.state;
@@ -78,14 +78,14 @@ export default class Main extends Component {
     this.setState({
       tarefas: [...novaTarefas],
     });
-  }
+  };
 
   render() {
     const { novaTarefa, tarefas } = this.state;
 
     return (
       <div className="main">
-        <h1>Reminders</h1>
+        <h1>Reminders 🔖 </h1>
 
         <Form
           handleSubmit={this.handleSubmit}
@@ -100,7 +100,6 @@ export default class Main extends Component {
           handleDelete={this.handleDelete}
           handleCheck={this.handleCheck}
         />
-
       </div>
     );
   }

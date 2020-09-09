@@ -1,20 +1,18 @@
-import React from 'react';
+import React from "react";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import { FaPlus } from 'react-icons/fa';
+import { FaPlus } from "react-icons/fa";
 
-import './Form.css';
+import "./Form.css";
+
+import "./Btn.scss";
 
 export default function Form({ handleChange, handleSubmit, novaTarefa }) {
   return (
     <form onSubmit={handleSubmit} action="#" className="form">
-      <input
-        onChange={handleChange}
-        type="text"
-        value={novaTarefa}
-      />
-      <button type="submit">
+      <input onChange={handleChange} type="text" value={novaTarefa} />
+      <button className="button" type="submit">
         <FaPlus />
       </button>
     </form>

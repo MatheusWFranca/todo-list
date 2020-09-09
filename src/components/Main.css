@@ -1,16 +1,20 @@
 .main {
-  background: #fff;
-  padding: 30px;
-  margin: 50px auto;
-  width: 500px;
-  position: relative;
-  border-radius: 8px;
-  box-sizing: border-box;
+  max-width: 400px;
+  width: 100%;
+  height: 200px;
+  margin: auto;
+  background-color: #fff;
+  font-family: sans-serif;
+  border-radius: 16px;
+  font-size: 15px;
+  overflow: hidden;
+  color: #455963;
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.3);
 }
 
 .main h1 {
   font-family: Poppins, sans-serif;
-  color: #C08497;
+  color: #c08497;
   font-size: 25px;
   text-align: center;
   text-transform: uppercase;
